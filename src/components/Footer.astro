@@ -1,39 +1,39 @@
-<footer class="bg-[#1e1e1e] text-white">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-center md:text-left">
+<footer class="bg-gray-900 text-gray-100">
+  <div class="container mx-auto px-6 py-12 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
 
-      <div class="lg:col-span-2 flex justify-center">
-        <div class="flex flex-col max-w-xs items-center md:items-start">
+      <div class="lg:col-span-2 flex justify-center md:justify-start">
+        <div class="flex flex-col items-center md:items-start max-w-md">
           <img
             src="/logo.png"
             alt="Logo de Contratista Servicios Generales Asociados"
-            class="w-36 h-auto mb-4"
+            class="w-40 h-auto mb-6"
             loading="lazy"
           />
-          <p class="text-sm font-light mb-2">
-            Tu compañero en <span class="font-semibold text-white">Progreso</span>
+          <p class="text-lg font-light mb-3 text-center md:text-left">
+            Tu compañero en <span class="font-semibold text-orange-400">Progreso</span>
           </p>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          <p class="text-gray-400 text-base leading-relaxed text-center md:text-left">
+            Soluciones integrales para construcción y remodelación con los más altos estándares de calidad profesional.
           </p>
         </div>
       </div>
 
       <div class="flex flex-col items-center md:items-start">
-        <h3 class="text-lg font-semibold mb-4 md:mb-6">Links Importantes</h3>
-        <ul class="space-y-3 text-sm text-gray-400">
+        <h3 class="text-xl font-semibold text-white mb-6 pb-2 border-b-2 border-orange-500 w-max">Enlaces Rápidos</h3>
+        <ul class="space-y-4 text-gray-400">
           {[
-            { label: "Centro de Soporte", href: "#" },
-            { label: "Política de Privacidad", href: "#" },
-            { label: "Términos y Condiciones", href: "#" },
-            { label: "Mapa del Sitio", href: "#" }
+            { label: "Inicio", href: "/" },
+            { label: "Servicios", href: "/services" },
+            { label: "Nosotros", href: "/about-us" },
+            { label: "Contacto", href: "/contact-us" }
           ].map(({ label, href }) => (
-            <li class="flex items-center gap-2" key={label}>
-              <span aria-hidden="true" class="text-green-400">→</span>
+            <li class="group">
               <a
                 href={href}
-                class="hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50 rounded"
+                class="hover:text-orange-400 transition-colors duration-300 flex items-center"
               >
+                <span class="mr-2 text-orange-500 transform group-hover:translate-x-1 transition-transform">→</span>
                 {label}
               </a>
             </li>
@@ -42,44 +42,35 @@
       </div>
 
       <div class="flex flex-col items-center md:items-start">
-        <h3 class="text-lg font-semibold mb-4 md:mb-6">Contact <span class="text-white">Us</span></h3>
-        <ul class="text-sm text-gray-400 space-y-3">
-          <li class="flex items-center gap-2">
-            <span aria-hidden="true">📞</span>
-            <a
-              href="tel:1234567890"
-              class="hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50 rounded"
-            >
+        <h3 class="text-xl font-semibold text-white mb-6 pb-2 border-b-2 border-orange-500 w-max">Contáctanos</h3>
+        <ul class="text-gray-400 space-y-4">
+          <li class="flex items-center gap-3 hover:text-orange-400 transition-colors duration-300">
+            <span class="text-orange-500">📞</span>
+            <a href="tel:1234567890" class="focus:outline-none focus:ring-2 focus:ring-orange-500 rounded">
               123 456 7890
             </a>
           </li>
-          <li class="flex items-center gap-2">
-            <span aria-hidden="true">📞</span>
-            <a
-              href="tel:1234567890"
-              class="hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50 rounded"
-            >
-              123 456 7890
+          <li class="flex items-center gap-3 hover:text-orange-400 transition-colors duration-300">
+            <span class="text-orange-500">📞</span>
+            <a href="tel:987654321" class="focus:outline-none focus:ring-2 focus:ring-orange-500 rounded">
+              987 654 321
             </a>
           </li>
-          <li class="flex items-center gap-2">
-            <span aria-hidden="true">📧</span>
-            <a
-              href="mailto:correo@correo"
-              class="hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50 rounded"
-            >
-              correo@correo
+          <li class="flex items-center gap-3 hover:text-orange-400 transition-colors duration-300">
+            <span class="text-orange-500">📧</span>
+            <a href="mailto:contacto@empresa.com" class="focus:outline-none focus:ring-2 focus:ring-orange-500 rounded">
+              contacto@empresa.com
             </a>
           </li>
         </ul>
 
-        <div class="mt-6">
+        <div class="mt-8">
           <h4 class="sr-only">Redes Sociales</h4>
-          <div class="flex gap-4 text-xl justify-center md:justify-start">
+          <div class="flex gap-5 justify-center md:justify-start">
             <a
               href="#"
               aria-label="Facebook"
-              class="hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50 rounded"
+              class="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-2xl"
               title="Visítanos en Facebook"
             >
               <span class="sr-only">Facebook</span>
@@ -88,7 +79,7 @@
             <a
               href="#"
               aria-label="Instagram"
-              class="hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50 rounded"
+              class="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-2xl"
               title="Visítanos en Instagram"
             >
               <span class="sr-only">Instagram</span>
@@ -97,7 +88,7 @@
             <a
               href="#"
               aria-label="YouTube"
-              class="hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50 rounded"
+              class="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-2xl"
               title="Visítanos en YouTube"
             >
               <span class="sr-only">YouTube</span>
@@ -109,11 +100,11 @@
     </div>
   </div>
 
-  <div class="bg-black py-4">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="bg-gray-800 py-6">
+    <div class="container mx-auto px-6">
       <p class="text-center text-sm text-gray-400">
         &copy; {new Date().getFullYear()} Contratista Servicios Generales Asociados. Todos los derechos reservados.
-        <span class="block sm:inline">Diseñado con ❤️ por Agencia Servitec</span>
+        <span class="block sm:inline mt-1 sm:mt-0">Diseñado con ❤️ por Agencia Servitec</span>
       </p>
     </div>
   </div>
