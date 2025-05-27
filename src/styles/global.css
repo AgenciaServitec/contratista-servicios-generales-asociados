@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-@theme{
+@theme {
     --font-sans: 'Inter Variable', sans-serif;
     --font-bebas-neve: 'Bebas Neue', sans-serif;
 }
+
+
