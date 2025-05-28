@@ -1,5 +1,6 @@
 ---
 import ContentWidth from "./ContentWidth.astro";
+import { Icon } from "astro-icon/components";
 
 const navItems = [
   { text: "Inicio", route: "/" },
@@ -44,16 +45,16 @@ const navItems = [
           class="inline-flex items-center justify-center p-2 rounded-lg bg-orange-500 text-white hover:bg-orange-600 transition-colors"
           aria-label="Contacto"
         >
-          <span class="text-lg text-white">📞</span>
+          <Icon name="mdi:phone-outline"/>
         </a>
       </div>
       <div class="hidden md:block ml-4">
         <a
           href="/contact-us"
-          class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors shadow-md hover:shadow-lg"
+          class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors shadow-md hover:shadow-lg gap-2"
         >
-          <span class="mr-2 text-white">📞</span>
-          Contacto
+          <Icon name="mdi:phone-outline"/>
+          <span>Contacto</span>
         </a>
       </div>
     </div>
