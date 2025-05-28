@@ -27,9 +27,9 @@ import { Icon } from "astro-icon/components";
         <ul class="space-y-4 text-gray-400">
           {[
             { label: "Inicio", href: "/" },
-            { label: "Servicios", href: "/services" },
-            { label: "Nosotros", href: "/about-us" },
-            { label: "Contacto", href: "/contact-us" }
+            { label: "Servicios", href: "#services" },
+            { label: "Nosotros", href: "#about-us" },
+            { label: "Contacto", href: "#contact-us" }
           ].map(({ label, href }) => (
             <li class="group">
               <a
@@ -57,7 +57,7 @@ import { Icon } from "astro-icon/components";
             <Icon name="mdi:phone-outline"/>
             <a href="tel:987654321" class="focus:outline-none focus:ring-2 focus:ring-orange-500 rounded">
               987 654 321
-            </a>mdi:camera-outline
+            </a>
           </li>
           <li class="flex items-center gap-3 hover:text-orange-400 transition-colors duration-300">
             <Icon name="mdi:camera-outline"/>
