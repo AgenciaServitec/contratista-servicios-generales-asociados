@@ -1,0 +1,1 @@
+export {default as servicesList} from "./services.json"
