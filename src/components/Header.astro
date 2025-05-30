@@ -8,7 +8,8 @@ const navItems = [
   { text: "Servicios", route: "#services" },
 ];
 ---
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100">
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-gray-100">
   <ContentWidth>
     <div class="flex justify-between items-center py-3 lg:py-4">
       <a href="/" class="flex items-center gap-3 group">
@@ -39,24 +40,63 @@ const navItems = [
           }
         </ul>
       </nav>
-      <div class="md:hidden">
-        <a
-          href="#contact-us"
-          class="inline-flex items-center justify-center p-2 rounded-lg bg-orange-500 text-white hover:bg-orange-600 transition-colors"
-          aria-label="Contacto"
-        >
-          <Icon name="mdi:phone-outline"/>
-        </a>
-      </div>
+      <button
+        id="menu-toggle"
+        class="md:hidden p-2 rounded-lg text-orange-500 focus:outline-none"
+        aria-label="Abrir menú"
+      >
+        <Icon name="mdi:menu" size={32} />
+      </button>
       <div class="hidden md:block ml-4">
         <a
           href="#contact-us"
           class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors shadow-md hover:shadow-lg gap-2"
         >
-          <Icon name="mdi:phone-outline"/>
+          <Icon name="mdi:phone-outline" />
           <span>Contacto</span>
         </a>
       </div>
     </div>
+    <div
+      id="mobile-menu"
+      class="md:hidden overflow-hidden transition-all duration-300 max-h-0 opacity-0 text-center"
+    >
+      {
+        navItems.map((nav) => (
+          <div class="h-[0.1em] w-full bg-gray-200"/>
+          <a
+            href={nav.route}
+            class="block px-4 py-3 text-gray-700 hover:text-orange-500 font-medium transition-colors"
+          >
+            {nav.text}
+          </a>
+        ))
+      }
+      <div class="h-[0.1em] w-full bg-gray-200"/>
+      <a
+        href=#contact-us
+        class="block px-4 py-3 gap-2 text-orange-700 hover:text-gray-500 font-medium transition-colors>"
+      >
+        Contacto
+      </a>
+    </div>
   </ContentWidth>
 </header>
+
+<script is:inline>
+  const toggleBtn = document.querySelector("#menu-toggle");
+  const mobileMenu = document.querySelector("#mobile-menu");
+
+  let isOpen = false;
+
+  toggleBtn?.addEventListener("click", () => {
+    isOpen = !isOpen;
+    if (isOpen) {
+      mobileMenu.classList.remove("max-h-0", "opacity-0");
+      mobileMenu.classList.add("max-h-96", "opacity-100");
+    } else {
+      mobileMenu.classList.remove("max-h-96", "opacity-100");
+      mobileMenu.classList.add("max-h-0", "opacity-0");
+    }
+  });
+</script>
