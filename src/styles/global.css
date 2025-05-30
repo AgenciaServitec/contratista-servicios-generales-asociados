@@ -5,4 +5,6 @@
     --font-bebas-neve: 'Bebas Neue', sans-serif;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
